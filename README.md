@@ -1,10 +1,6 @@
 # seek-asia-hackathon-2015
 The page is at http://seekasia-hackathon-2015.github.io/
 
-# ToDo
-
-- [ ] Correct the information: register link
-
 # Feature (not urgent)
 
 - [ ] countdown clock to hackathon

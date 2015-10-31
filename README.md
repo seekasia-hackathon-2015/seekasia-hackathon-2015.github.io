@@ -4,7 +4,7 @@ The page is at http://seekasia-hackathon-2015.github.io/
 # ToDo
 
 - [ ] Vendor section, location of the hackathon (can hide it first)
-- [ ] Judge section, photos and description of judge (maybe use normal table or ul first)
+- [x] Judge section, photos and description of judge (maybe use normal table or ul first)
 - [ ] committee link, open dialog with jpg image? (can hide it first)
 - [ ] Register link, need latest link
 - [ ] Correct the information: example pitch day

@@ -1,0 +1,131 @@
+body {font-size:14px}
+body, h1, h2, h3, h4, h5, h6 {font-family: 'Lato', sans-serif;}
+.location-map {background:#113A7E;}
+.location-map img {margin:0 auto}
+
+.navbar-brand img {position:absolute; top:0}
+.btn-primary {background-color:#e60a7c}
+.btn-primary:hover {background-color:#F40D85; cursor:pointer}
+.btn-info {background:#2196f3}
+.btn-info:hover,.btn-info:active:hover,.btn-info:focus{background-color:#0d87e9}.btn-info:active{background-color:#0d87e9;background-image:-webkit-radial-gradient(circle, #0d87e9 10%, #2196f3 11%);background-image:-o-radial-gradient(circle, #0d87e9 10%, #2196f3 11%);background-image:radial-gradient(circle, #0d87e9 10%, #2196f3 11%);background-repeat:no-repeat;-webkit-background-size:1000% 1000%;background-size:1000%;-webkit-box-shadow:2px 2px 2px rgba(0,0,0,0.3);box-shadow:2px 2px 2px rgba(0,0,0,0.3)}
+
+.bs-docs-section {margin-bottom:20px}
+
+h1 {
+font-size: 45px;
+color: #555555;
+}
+
+h3 {
+line-height: 150%;
+font-size:21px
+}
+
+h4 {
+color: #555555;
+}
+
+.no-padding {
+padding: 0px !important;
+width: 100% !important;
+}
+
+.leader-name {
+padding-top: 20px;
+font-size: 30px;
+color: #0d3880;
+}
+
+.position {
+font-size: 20px;
+color: #555555;
+padding-bottom:100px;
+}
+
+a {
+color: #e60a7c;
+}
+
+.grey-color {
+background-color: #eeeeee;
+}
+
+.blue-color {
+background-color: #0d3880;
+}
+
+.white-title {
+color: white;
+}
+
+.header-img {
+padding-bottom:50px;
+padding-top:80px;
+}
+
+.img-center {
+display: inline !important;
+}
+
+.footer {
+padding:10px;
+}
+
+.left-text {
+padding-right: 100px;
+}
+
+.top-space{
+padding-top: 50px;
+}
+
+.bottom-space {padding-bottom: 70px;}
+.bottom-top-space {padding-top:70px; padding-bottom:70px}
+
+.box {
+height: 300px;
+background-color:white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding:30px;
+margin:0px;
+border-radius: 3px;
+}
+.box a {font-size:21px}
+
+.top1 {
+height:60%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.bottom1 {
+height:40%;
+}
+
+.img-circle {
+width:250px;
+}
+
+.map {
+width:976px;
+height: 1838px;
+}
+
+@media (max-width: 768px){
+
+h1 {font-size: 32px;}
+h3 {font-size: 18px;}
+.box, .top1, .bottom1 {height:auto}
+.box {margin-bottom:20px;}
+.box a {font-size:14px}
+.top1 {margin-bottom:15px}
+.bottom1 {line-height:2}
+.position {padding-bottom:30px}
+.leader-name {margin-bottom:0; line-height:1}
+
+.bottom-top-space {padding-top:40px; padding-bottom:40px}
+
+}
+

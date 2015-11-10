@@ -153,6 +153,7 @@ height: 1838px;
 .timeline > li:after {
     clear: both;
 }
+.timeline > li > .timeline-panel.fade-off {opacity:0.5}
 .timeline > li > .timeline-panel {
     width: calc(100% - 25px);
     width: -moz-calc(100% - 25px);
@@ -229,6 +230,7 @@ height: 1838px;
     padding: 10px 15px;
     margin-bottom: 0;
 }
+.timeline-body > ul {margin-left:20px}
 .timeline-footer {
     padding: 2px 15px;
     background-color:#f4f4f4;

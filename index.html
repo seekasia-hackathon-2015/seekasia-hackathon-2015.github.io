@@ -10,6 +10,10 @@
     <link rel="shortcut icon" href="http://www.seek.com.au/favicon6.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- For Bootstrap gallery -->
+    <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -17,40 +21,144 @@
     <![endif]-->
     <style>
 h1 .anchor {
-	display: none;
-	cursor: pointer;
+    display: none;
+    cursor: pointer;
 }
 h1:hover .anchor {
-	display: inline
+    display: inline
 }
 #top-link-block.affix {
-	position: fixed;
-	bottom: 18px;
-	right: 10px;
+    position: fixed;
+    bottom: 18px;
+    right: 10px;
 }
 .face {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 .navbar-btn {
-	padding-left: 15px;
+    padding-left: 15px;
 }
 footer {
-	background-color: rgb(245, 245, 245);
+    background-color: rgb(245, 245, 245);
 }
 footer .navbar-text {
-	margin-top: 0;
-	margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 .list-bullet {
-	list-style: disc;
+    list-style: disc;
 }
 
 .idea-schedule-table{
    margin-top: 18px;
 }
+
+/* Gallery CSS  */
+.bs-docs-section-alternate {
+  background: #EEE;
+  margin: 20px 0;
+}
+.gallery-stack {
+  margin-top:20px;
+  margin-bottom:20px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stack {
+  flex-grow: 0;
+  margin: 20px;
+  width: 300px;
+  height: 300px;
+  padding: 0;
+  position: relative;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.stack figcaption {
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:40px 30px 10px;
+  text-align: center;
+  color: #FFF;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.9);
+  font-size: 30px;
+  line-height: 1em;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+}
+
+.stack figcaption p {
+  font-size: 12px;
+  line-height: 1.4em;
+  margin:0;
+  text-transform: uppercase;
+}
+
+.stack img {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  outline: 1px solid transparent;
+}
+
+.stack img:last-child {
+  position: relative;
+}
+
+.stack-peekaboo img:first-child,
+.stack-peekaboo img:nth-child(2),
+.stack-peekaboo img:nth-child(3) {
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.stack-peekaboo.active img:nth-child(3) {
+  -webkit-transform: scale(0.5) translate(-50%,-50%) rotate(-15deg);
+  transform: scale(0.5) translate(-50%,-50%) rotate(-15deg);
+}
+
+.stack-peekaboo.active img:first-child {
+  -webkit-transform: scale(0.5) translate(50%,-50%) rotate(15deg);
+  transform: scale(0.5) translate(50%,-50%) rotate(15deg);
+}
+
+.stack-peekaboo.active img:nth-child(2) {
+  -webkit-transform: scale(0.5) translate(0,-50%);
+  transform: scale(0.5) translate(0,-50%);
+}
+
+.stack-peekaboo img:nth-child(4) {
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+
+.stack-peekaboo.active img:nth-child(4) {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.stack-peekaboo.active figcaption {
+  -webkit-transform: scale(0.9) translate(0,5%);
+  transform: scale(0.9) translate(0,5%);
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+
+.blueimp-gallery>.prev, .blueimp-gallery>.next {
+  border-width: 1px;
+}
+
 </style>
     </head>
     <body>
@@ -90,16 +198,40 @@ img {
 <p>Aim to build a hack that people can use, enjoy, and potentially scale. Most importantly, have fun with it and try to finish in time. We know you can only do so much in 12 hours, so it’s ok if your project is not perfect (yet).</p>
         <br>
         <div class="row text-center">
-        	<a href="https://seekasia-my.sharepoint.com/personal/siowching_seekasia_com/_layouts/15/WopiFrame.aspx?sourcedoc={1F13EE01-11C3-4A4E-8B81-103A878DC881}&file=SEEK%20Asia%20Hackathon%20-%20Team%20Recruitment.xlsx&action=default" class="btn btn-info btn-lg" target="_blank" rel="nofollow">View Ideas</a>
-        	<a href="http://goo.gl/forms/cFICNRw5AL" class="btn btn-primary btn-lg" target="_blank" rel="nofollow">Team Registration</a>
+            <a href="https://seekasia-my.sharepoint.com/personal/siowching_seekasia_com/_layouts/15/WopiFrame.aspx?sourcedoc={1F13EE01-11C3-4A4E-8B81-103A878DC881}&file=SEEK%20Asia%20Hackathon%20-%20Team%20Recruitment.xlsx&action=default" class="btn btn-info btn-lg" target="_blank" rel="nofollow">View Ideas</a>
+            <a href="http://goo.gl/forms/cFICNRw5AL" class="btn btn-primary btn-lg" target="_blank" rel="nofollow">Team Registration</a>
       </div>
         </div>
   </div>
+  </div>
+
+  </div> <!-- end of container -->
+
+  <!-- Gallery -->
+  <div class="bs-docs-section-alternate">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="gallery-stack">
+            <figure class="stack stack-peekaboo" id="pitching_kl_gallery">
+              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8518_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8522_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8524_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8527_SQ.jpg" alt="">
+              <figcaption><p>Thursday, 12th Nov 2015</p>Pitching at KL/PG</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
 
       <div class="bs-docs-section">
     <div class="row">
-	<div class="col-sm-8 col-sm-offset-2">
-	<h1 id="schedule">Schedule <a class="anchor" href="#schedule"></a></h1><br>
+    <div class="col-sm-8 col-sm-offset-2">
+    <h1 id="schedule">Schedule <a class="anchor" href="#schedule"></a></h1><br>
     <!-- Timeline -->
 
     <ul class="timeline">
@@ -143,8 +275,8 @@ img {
             <div class="timeline-badge">
                 <a><i class="fa fa-circle" id=""></i></a>
             </div>
-			
-			<div class="timeline-panel fade-off">
+
+            <div class="timeline-panel fade-off">
             <div class="timeline-panel">
                    <div class="timeline-footer">
                     <p class="text-right">Thursday, 12th Nov 2015</p>
@@ -162,7 +294,7 @@ img {
                 </div>
 
             </div>
-			</div>
+            </div>
         </li>
 
         <li class="timeline-inverted">
@@ -660,9 +792,9 @@ img {
                         </tr>
                      </thead>
                      <tbody>
-                         
+
                          <tr>
-                           <td rowspan="5">2:30pm</td>                         
+                           <td rowspan="5">2:30pm</td>
                            <td>Redesigning Meeting/Discussion Rooms</td>
                            <td>Ang Kian Leong</td>
                            <td>KL</td>
@@ -751,12 +883,12 @@ img {
                            <td>KL</td>
                          </tr>
                          <tr>
-						   <td>Smart GPS</td>
+                           <td>Smart GPS</td>
                            <td>Lay How</td>
                            <td>KL</td>
                          </tr>
                          <tr>
-						   <td>Linkedin integration</td>
+                           <td>Linkedin integration</td>
                            <td>WP Siew</td>
                            <td>KL</td>
                          </tr>
@@ -766,8 +898,8 @@ img {
                            <td>KL</td>
                          </tr>
                          <tr>
-						   <td rowspan="5">3:30pm</td>
-							<td>Employee rating platform</td>
+                           <td rowspan="5">3:30pm</td>
+                            <td>Employee rating platform</td>
                            <td>Lucas Lee</td>
                            <td>KL</td>
                          </tr>
@@ -821,7 +953,7 @@ img {
               </div>
                 </div>
           </div>
-           	<div class="panel panel-default">
+            <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingTwo"> <a class="collapsed panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               <h5>Why are we doing the Hackathon?</h5>
               </a> </div>
@@ -840,10 +972,10 @@ img {
               </a> </div>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                   <div class="panel-body">Since this is our first SEEK Asia Hackathon, we want to keep the theme open. All ideas (problems) are welcome!
-			</div>
+            </div>
                 </div>
           </div>
-          	<div class="panel panel-default">
+            <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingFour"> <a class="panel-title collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
         <h5>What are the expected outcomes?</h5>
               </a> </div>
@@ -1030,12 +1162,82 @@ img {
   </div>
     </footer>
 
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
+  <!-- The container for the modal slides -->
+  <div class="slides"></div>
+  <!-- Controls for the borderless lightbox -->
+  <h3 class="title"></h3>
+  <a class="prev">‹</a>
+  <a class="next">›</a>
+  <a class="close">×</a>
+  <a class="play-pause"></a>
+  <ol class="indicator"></ol>
+  <!-- The modal dialog, which will be used to wrap the lightbox content -->
+  <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body next"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left prev">
+          <i class="glyphicon glyphicon-chevron-left"></i>
+          Previous
+          </button>
+          <button type="button" class="btn btn-primary next">
+          Next
+          <i class="glyphicon glyphicon-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="js/bootstrap-image-gallery.min.js"></script>
 <script type="text/javascript">
       $('#top-link-block').removeClass('hidden').fadeIn(0.5).affix({
         offset: {top:250}
       });
+
+      // Gallery JS
+      $('.stack').on('mouseover', function(){
+        $(this).addClass('active');
+      });
+      $('.stack').on('mouseout', function(){
+        $(this).removeClass('active');
+      });
+
+      // Pitching at KL+PG
+      $('#pitching_kl_gallery').on('click', function(){
+        var gallery = blueimp.Gallery([
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8515.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8516.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8517.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8518.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8519.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8520.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8521.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8522.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8523.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8524.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8525.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8526.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8527.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8528.jpg',
+'http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8529.jpg'
+        ], {
+          useBootstrapModal: false,
+          thumbnailIndicators: false
+        });
+      });
+
 </script>
 </body>
 </html>

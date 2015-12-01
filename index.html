@@ -213,12 +213,27 @@ img {
       <div class="row">
         <div class="col-sm-12">
           <div class="gallery-stack">
-            <figure class="stack stack-peekaboo" id="preparations">
-              <img src="http://www.seekasia.com/hackathon2015/photo/preparation/IMG_3345_SQ.jpg" alt="">
-              <img src="http://www.seekasia.com/hackathon2015/photo/preparation/IMG_3358_SQ.jpg" alt="">
-              <img src="http://www.seekasia.com/hackathon2015/photo/preparation/IMG_3376_SQ.jpg" alt="">
-              <img src="http://www.seekasia.com/hackathon2015/photo/preparation/IMG_3339_SQ.jpg" alt="">
-              <figcaption>Preparations</figcaption>
+            <!-- Latest Photo (TOP to BOTTOM) -->
+            <figure class="stack stack-peekaboo" id="hackathon_hkcdc_gallery">
+              <img src="http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/12-49-37_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-21-55_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-50-28_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-17-22_SQ.jpg" alt="">
+              <figcaption><p>Wednesday, 25th Nov 2015</p>Hackathon at HK/CDC</figcaption>
+            </figure>
+            <figure class="stack stack-peekaboo" id="hackathon_klpg_gallery">
+              <img src="http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-59-42_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/09-06-14_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-19-08_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-33-19_SQ.jpg" alt="">
+              <figcaption><p>Wednesday, 25th Nov 2015</p>Hackathon at KL/PG</figcaption>
+            </figure>
+            <figure class="stack stack-peekaboo" id="pitching_hkcdc_gallery">
+              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-hk-cdc/IMG_3452_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-hk-cdc/DSC_1523_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-hk-cdc/2015-11-12-%5B150928-50%5D---Daniel-Walters_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-hk-cdc/2015-11-12-%5B150800-00%5D_SQ.jpg" alt="">
+              <figcaption><p>Thursday, 12th Nov 2015</p>Pitching at HK/CDC</figcaption>
             </figure>
             <figure class="stack stack-peekaboo" id="pitching_klpg_gallery">
               <img src="http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/IMG_8522_SQ.jpg" alt="">
@@ -227,12 +242,12 @@ img {
               <img src="http://www.seekasia.com/hackathon2015/photo/pitching-kl-pg/HackPG_20151112_144920_SQ.jpg" alt="">
               <figcaption><p>Thursday, 12th Nov 2015</p>Pitching at KL/PG</figcaption>
             </figure>
-            <figure class="stack stack-peekaboo" id="pitching_hkcdc_gallery">
-              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-hk-cdc/IMG_3452_SQ.jpg" alt="">
-              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-hk-cdc/DSC_1523_SQ.jpg" alt="">
-              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-hk-cdc/2015-11-12-%5B150928-50%5D---Daniel-Walters_SQ.jpg" alt="">
-              <img src="http://www.seekasia.com/hackathon2015/photo/pitching-hk-cdc/2015-11-12-%5B150800-00%5D_SQ.jpg" alt="">
-              <figcaption><p>Thursday, 12th Nov 2015</p>Pitching at HK/CDC</figcaption>
+            <figure class="stack stack-peekaboo" id="preparations">
+              <img src="http://www.seekasia.com/hackathon2015/photo/preparation/IMG_3345_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/preparation/IMG_3358_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/preparation/IMG_3376_SQ.jpg" alt="">
+              <img src="http://www.seekasia.com/hackathon2015/photo/preparation/IMG_3339_SQ.jpg" alt="">
+              <figcaption>Preparations</figcaption>
             </figure>
           </div>
         </div>
@@ -1363,6 +1378,156 @@ img {
 'http://www.seekasia.com/hackathon2015/photo/pitching-hk-cdc/IMG_3452.jpg',
 'http://www.seekasia.com/hackathon2015/photo/pitching-hk-cdc/IMG_3454.jpg',
 'http://www.seekasia.com/hackathon2015/photo/pitching-hk-cdc/IMG_3458.jpg'
+        ], {
+          useBootstrapModal: false,
+          thumbnailIndicators: false
+        });
+      });
+
+      // Hackathon at KL+PG
+      $('#hackathon_klpg_gallery').on('click', function(){
+        var gallery = blueimp.Gallery([
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/07-32-46.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/07-34-39.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-05-44.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-08-19.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-09-07.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-10-54.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-11-30.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-11-42.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-11-53.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-12-17.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-17-53.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-19-08.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-20-13.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-20-30.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-21-00.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-21-26.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-24-18.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-31-52.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-33-19.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-33-27.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-34-48.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-37-15.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-38-19.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-40-05.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-41-15.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-42-45.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-54-01.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-55-31.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-56-41.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-57-20.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/08-58-15.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/09-05-41.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/09-06-02.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/09-06-14.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/09-44-05.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/09-55-16.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-11-57.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-12-16.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-12-50.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-13-25.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-15-52.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-18-38.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-55-44.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-59-24.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-59-31.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-59-36.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/12-59-42.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/13-03-41.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/13-46-48.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/13-47-00.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/13-47-08.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/14-10-55.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/14-12-46.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/14-15-03.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/14-19-22.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/14-19-48.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/14-20-19.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/15-06-47.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/15-06-57.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/15-07-30.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/15-08-14.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/15-26-46.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/16-24-18.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/16-46-09.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/16-48-23.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-34-36.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-34-59.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-35-07.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-36-53.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-37-36.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-38-06.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-38-30.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-38-51.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-39-34.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-39-54.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-40-25.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-40-47.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-41-12.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-41-33.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-41-59.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-42-18.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-42-37.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-42-59.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-43-19.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-44-33.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-klpg/17-45-25.jpg'
+        ], {
+          useBootstrapModal: false,
+          thumbnailIndicators: false
+        });
+      });
+
+      // Hackathon at HK+CDC
+      $('#hackathon_hkcdc_gallery').on('click', function(){
+        var gallery = blueimp.Gallery([
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/07-41-11.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/07-44-08.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/07-49-16.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/07-49-19.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-04-52.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-06-09.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-06-35.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-06-56.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-07-24.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-15-37.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-17-22.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-17-39.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-18-21.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-18-28.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-21-05.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-21-37.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-21-55.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-27-55.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-34-41.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-35-05.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-37-34.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-50-02.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-50-28.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-50-38.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-52-17.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/08-57-44.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/12-25-08.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/12-25-40.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/12-30-31.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/12-30-38.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/12-33-01.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/12-49-37.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/12-49-48.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/14-13-53.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/14-14-39.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/14-17-28.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/14-18-13.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/14-18-28.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/14-18-52.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/14-24-31.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/14-25-39.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/14-29-19.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/16-31-21.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/16-31-48.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/16-32-07.jpg',
+'http://www.seekasia.com/hackathon2015/photo/hackathon-day-hkcdc/18-04-20.jpg'
         ], {
           useBootstrapModal: false,
           thumbnailIndicators: false
